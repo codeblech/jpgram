@@ -1,0 +1,17 @@
+Hi folks! 👋
+
+It's Hacktober month! ✨
+
+Coming Tuesday (11th October), we, the Open Source Developers Community (OSDC) will be talking about Hacktoberfest, which is a month-long, international celebration of open-source projects, to spread awareness and encourage people to contribute to OSS in the month of October!
+
+Don't know how to get started?
+Don't know what 'Git', 'GitHub', or 'Pull Requests' are? 
+
+Don't worry! We got your back. We'll be going over some basic concepts on how to use Git/GitHub before showing off Hacktoberfest and telling you how you can kickstart your journey in open source and stand a chance to earn schwags by contributing! 🚀
+
+Be sure to bring your laptops since we'll be having a hands-on demonstration.
+
+Details - 
+Venue - Lab CL1 (Near LRC)
+Time - 5:00 P.M. onwards
+Date - Tuesday, 11th October, 2022

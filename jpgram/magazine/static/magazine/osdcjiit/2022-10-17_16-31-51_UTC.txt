@@ -1,0 +1,27 @@
+Hi folks! 👋
+
+Coming Tuesday (18th October), we, the Open Source Developers Community (OSDC) will be conducting a talk on "TEXTING: Text Editors and IDE's".
+
+These are the basic tools, your magic wands if you may, that you will be using in your journey as a computer science student (and upcoming professional). Languages may come and go, but text editors remain constant (kinda).
+
+Getting confused about the text editor you should start your developer journey with? 
+Don't know how to set up your IDE for your use case?
+
+Don't worry! In this talk, we'll be going over:
+
+- A basic introduction of some popular Text Editors and IDE's
+ - VSCode
+ - (Neo)vim
+ - Sublime Text
+- How to get started
+- Setup
+- Some Tips and Tricks 
+
+You'll be up to speed with all the information you'll need to pick what's best for you and setup you dream environment. ⌨️✨
+
+We will also be having an online session on the coming Saturday (22nd October, 2022) on Vim (extremely powerful text editor) and how to get started with it.
+
+Details - 
+Venue - CL4 (below LRC)
+Time - 5:00 P.M. onwards
+Date - Tuesday, 18th October, 2022

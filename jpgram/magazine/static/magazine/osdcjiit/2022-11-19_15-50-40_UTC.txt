@@ -1,0 +1,13 @@
+Happy Saturday folks!
+ 
+We’ve got something fun lined up for you at this week's OSDC meetup!
+This Tuesday, we'll teach you how you can access someone's webcam, their call logs (and other stuff) on their phone while they're playing something as simple as Flappy Bird.
+
+Sounds interesting?
+Join us at CL-02 for an amazing talk and demonstration on “MAY I OWN YOUR PHONE“, where we reveal the secrets behind the hack. 
+
+<venue> CL02 </venue>
+<date> Tuesday, 22 November 2022 </date>
+<time> 5:00 P.M. - 6:00 P.M. </time>
+
+(OSDC will not be responsible for any damages or legal troubles you may get in for trying what you learn on others)

@@ -1,0 +1,14 @@
+Ahoy, aspiring code adventurers and open-source enthusiasts! 🐧🚀
+
+Are you ready to embark on a quest of epic proportions into the mystical realms of Git and GitHub? 🌌🔮 Calling all students, especially you wide-eyed freshers, to an exciting hands-on Git and Github Workshop.
+
+📅 Date: 5th September 
+🕒 Time: 5:00 pm
+📍 Venue: CL01
+
+Prepare to unravel the enigma that is version control with Git. We'll learn how to tame the wild branches, cast spells with commits, and merge with the wisdom of a thousand wizards. GitHub, the land of collaboration, will be our trusty sidekick on this journey.
+
+ 🌟 Say goodbye to fears of the command line – we'll also teach you the basic command line tools.
+
+🐱‍💻 So, bring your laptops, your curiosity, and your best jokes (no, seriously, bring those – we love a good laugh).
+Join us at this next Open Source Developers Community's meetup!

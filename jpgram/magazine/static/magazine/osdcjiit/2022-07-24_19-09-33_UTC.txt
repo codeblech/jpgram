@@ -1,0 +1,5 @@
+The Open Source Developers Community is an initiative by the students of JIIT to promote open source culture. The hub is all about contributing to and collaborating on projects, networking, learning together and guiding each other.
+
+We are a community of web developers, android freaks, machine learning enthusiasts, hackers, designers, game developers and most significantly, explorers.
+
+Here at OSDC, we are driven towards promoting Open Source far and wide, in an effort to enhance learning in a much more creative way through community projects, workshops, talks and now even conferences!

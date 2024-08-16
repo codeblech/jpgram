@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}College Magazine{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-dark: #1E201E;
+            --color-medium: #3C3D37;
+            --color-light: #697565;
+            --color-beige: #ECDFCC;
+        }
+
+        body {
+            background-color: var(--color-beige);
+            color: var(--color-dark);
+        }
+
+        .sidebar {
+            background-color: var(--color-medium);
+            min-height: 100vh;
+            padding-top: 2rem;
+        }
+
+        .sidebar h3 {
+            color: var(--color-beige);
+            border-bottom: 2px solid var(--color-light);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: var(--color-beige);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--color-light);
+        }
+
+        .main-content {
+            padding: 2rem;
+        }
+
+        .main-content h1 {
+            color: var(--color-medium);
+            border-bottom: 3px solid var(--color-light);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .article h2 {
+            color: var(--color-medium);
+        }
+
+        .article p {
+            color: var(--color-dark);
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-lg-2 sidebar">
+                <h3 class="text-center mb-4">College Societies</h3>
+                <ul>
+                    <li><a href="/magazine/osdcjiit">osdcjiit</a></li>
+                    <li><a href="/magazine/jiityouthclub">jiityouthclub</a></li>
+                    <li><a href="/magazine/gdscjiit">gdscjiit</a></li>
+                    <li><a href="/magazine/thethespiancircle">thethespiancircle</a></li>
+                    <li><a href="/magazine/crescendojiit">crescendojiit</a></li>
+                    <li><a href="/magazine/cice_jiit">cice_jiit</a></li>
+                    <li><a href="/magazine/thepageturnersociety">thepageturnersociety</a></li>
+                    <li><a href="/magazine/radiance.hub">radiance.hub</a></li>
+                    <li><a href="/magazine/parola.literaryhub">parola.literaryhub</a></li>
+                    <li><a href="/magazine/thejaypeedebsoc">thejaypeedebsoc</a></li>
+                    <li><a href="/magazine/jhankaarjiit">jhankaarjiit</a></li>
+                    <li><a href="/magazine/knuth_jiit">knuth_jiit</a></li>
+                    <li><a href="/magazine/ucrjiit">ucrjiit</a></li>
+                    <li><a href="/magazine/jaypee.photo.enthusiasts.guild">jaypee.photo.enthusiasts.guild</a></li>
+                    <li><a href="/magazine/nssjiit62">nssjiit62</a></li>
+                    <li><a href="/magazine/jiit.impressions">jiit.impressions</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9 col-lg-10 main-content">
+                <h1 class="text-center mb-5">{% block page_title %}College Magazine{% endblock %}</h1>
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

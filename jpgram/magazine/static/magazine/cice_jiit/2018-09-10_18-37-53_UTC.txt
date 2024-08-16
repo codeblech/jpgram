@@ -1,0 +1,40 @@
+Have you ever thought about creating your own circuits? 
+We are not talking about doing wire connections on the breadboard!
+We're talking about printing your own design on the copper board/clad. 
+Does that sound interesting to you?
+If yes, CICE is proud to organize "PCB Fabrication" workshop in which we will guide you on how to build :
+
+1. ATMEGA-16(AVR) Development board.
+
+2. AVR- ISP programmer.
+
+Here is what you'll take back with yourself from the workshop:
+
+1. An introduction to Eagle software for circuit designing.
+
+2. Printing of the design on the copper clad.
+
+3. Etching out unwanted metal from the copper clad.
+
+4. Mechanical tasks like drilling.
+
+5. An overall run-through of the board.
+
+So gear up for the workshop and register your kit to successfully design your own circuit. 
+Get ready to take a dive into the real world of electronics!
+
+Cost for the kit:- ₹ 600/-
+Team Size: 2(Maximum)
+
+Registration desk details are as follows:
+Date-12-13 September,2018
+Time & Venue-
+Outside Annapurna:12-2pm 
+Outside A2Z: 6-7pm {For JIIT, Sector 128}
+
+Note: All the participants who successfully complete the Fabrication 
+process will be awarded certificates.
+
+For any further details contact:
+Jitesh: +91-7060303100
+Tulika: +91-9711113860

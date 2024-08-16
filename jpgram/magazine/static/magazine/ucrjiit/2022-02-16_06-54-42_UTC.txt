@@ -1,0 +1,3 @@
+rehearse is a platform for young developers to kickstart their careers. Learn and practice in-demand technologies like Python, JavaScript and React from industry experts with project building experiences, internships fairs, 24/7 mentor support, 100% scholarships and more.
+
+Visit https://rehearse.sh for more information.

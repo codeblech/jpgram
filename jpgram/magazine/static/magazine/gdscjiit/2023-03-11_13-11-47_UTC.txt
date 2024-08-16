@@ -1,0 +1,15 @@
+Are you looking to add developing an app to your portfolio? Do you want to learn creating dynamic mobile apps?
+Flutter and Firebase are two powerful tools that can help you create dynamic, responsive, and scalable apps, and GDSC JIIT is glad to bring to you our workshop on Flutter where you will learn:
+▪️An overview of Flutter and Firebase
+▪️Setting up your Flutter environment
+▪️Creating a Firebase project and setting up authentication
+▪️Building a simple To-do app with Flutter and Firebase!
+Don’t miss this opportunity to develop your first Flutter app and add a popular skill to your résumé!👾
+RSVP link- shorturl.at/pyBS1
+📆 Date: March 13-15, 2023
+🕠 Time: 5:30 pm onwards
+📍 Venue: CL-1
+.
+.
+.
+#flutterforwardextended #flutterforward #flutter #googledevelopers #gdsc

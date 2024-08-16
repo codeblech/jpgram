@@ -1,0 +1,18 @@
+Clueless.
+Absolutely clueless.
+Feeling majorly lost and slightly annoyed...
+
+...pretty much sums up how you're going to feel half of the time in your software development journey. We, at OSDC, have decided to embrace this process of finding yourself lost in uncharted territories and figuring a way out for yourself. 
+
+Join us on March 18th for a digital treasure hunt of our own where we'll have you working with *loads* of technologies and getting familiar with adapting to the unknown. 
+
+Irrespective of your technical prowess, we'll have you:
+- set-up development environments
+- fix bugs
+- troubleshoot linux systems 
+- find flags 
+- and expose you to a lot of different technologies you may not have come across before
+
+Register at https://ossdevs.com (link in bio) for the event, people can participate solo or in teams of 2. 
+
+May the fastest googler win!

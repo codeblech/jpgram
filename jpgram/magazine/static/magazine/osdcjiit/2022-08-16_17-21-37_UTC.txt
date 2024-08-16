@@ -1,0 +1,15 @@
+DevOps, a field that has been just as much overlooked as it's crucial to development.
+Despite its recent surge in popularity, DevOps still retains an air of mystery about it for a lot of people. (Spoiler - Not a first-person shooter game)
+
+This week's talk aims at debunking it. On top of getting a clear idea of just what DevOps is about, you'll also learn about various DevOps processes like automation, CI/CD pipelines etc. followed by a practical demonstration of basic CI/CD pipelines, Github-actions.
+
+So join in this Friday to an exciting meetup/talk. Look forward to seeing you there!
+
+Date: Friday, 19th August 2022
+Time: 6:00 P.M.
+Links for the meetup and form for Google Calendar invite are at ossdevs.com (Link in bio)
+
+.
+.
+
+P.S. Thank you for the poster @sritama_10!

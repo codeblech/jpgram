@@ -1,0 +1,6 @@
+Hey folks!
+Calling all code-savvy college students! The Open Source Development Community (OSDC) is thrilled to host a meet-up talk that's sure to be a real "source" of inspiration. Our next meet-up will be all about Google Summer of Code (GSOC), and we'll show you how to "git" involved.
+
+The event will take place on "January 27th", at "CL-01," “17:00” onwards. Our guest speaker, Pranshu Srivastava, an experienced GSOCer and currently a developer at @redhatinc , will share his insights and tips on how to make the most of the programme. Additionally, we will have a panel of past GSOC students who will share their experiences and answer questions.
+
+This is a great opportunity for anyone interested in open source development and looking for a chance to gain valuable experience and contribute to the community. Don't "bug" out on this opportunity to learn from experts and network with other students.

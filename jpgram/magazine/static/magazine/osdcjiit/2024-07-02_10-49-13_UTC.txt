@@ -1,0 +1,7 @@
+Introducing Rathi, our student coordinator who is a big finance and tech nerd. Legend goes that Rathi once wrote a program that could predict the stock market with 100% accuracy. Of course, he had to destroy it to prevent it from falling into the wrong hands, but the legend lives on.
+
+He loves to go back to his wizard hut to cook stuff up with Elixir and tinker around with python. And whatever you do, don't challenge him to a Codeforces joust. Rathi's the chillest dude on the team (and he knows it).
+
+@yryuvraj
+
+poster design creds: @lexoskeletons

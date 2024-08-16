@@ -1,0 +1,14 @@
+To start your journey in the field of autonomous robotics, the first step is to build a Line Following Robot (LFR). μCR invites all the first years to join our autonomous robotics workshop. To start with, you need to get the hardware kits. So team up and get yourself registered.
+
+Here are the Kit Registration details:
+
+Registration timings:
+Date: 15-18 January
+Timings: 12:00pm - 2:00pm
+Venue: ABB-I
+
+For 128 students :
+
+Date: 14-18 January
+Timings: 5:00pm - 6:30pm
+Venue: Annapurna III

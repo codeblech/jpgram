@@ -1,0 +1,21 @@
+Hello there! 🤠
+Are you, or someone you know, a beginner in tech, and want to participate in hackathons?
+Do you currently lack the skillset or idea pool to get started hacking?
+Or do you struggle finding teammates to group up with?
+
+We are pleased to announce the third iteration of OSDCodeJam! 🥳
+
+OSDCodeJam is JODC and OSDC's yearly entry-level hackathon (well, not strictly). Unlike other hackathons, participants here register individually and are grouped into teams, by us, based on their skills and experience to make sure teams are on equal footing. Each team has a period of 5 days to make a project on a theme, which'll be announced beforehand. 🌙 
+
+CodeJam is a great learning experience, especially if you're a beginner since we believe there's always something to bring to the table 🪑.
+As usual, the Jam will be hosted over GitHub which also means that it'll be a great way to learn tools like Git, which are essential for any software developer's journey. More importantly, it'll be an opportunity to interact and collaborate with new people as you learn together, have fun and build something exciting by the end of it. 🛠️ 
+
+The jamming period will be from January 9 - January 13, with fun daily quizzes!
+
+For all the details, check out the repository for the Jam at https://codejam.ossdevs.com/
+
+Registrations are open till January 5, 2023. Head over to https://ossdevs.com/ for the registration link.
+ 
+For any queries, feel free to reach out to us on our Discord/Telegram. We'll be happy to help! Links at -  https://ossdevs.com
+
+P.S. All links are in bio!

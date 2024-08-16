@@ -1,0 +1,19 @@
+Hey folks! 👋
+Have you ever try to look under the hood of a compilation process? How does your source code get compiled?
+How does your machine understand your code? Magic ✨? Have you ever taken a look at compilers other than GCC or Microsoft Visual C/C++?
+
+Modern day production quality compilers are enormously complex pieces of software that require a lot of background knowledge to tinker with. This can make it daunting for newcomers like us to break into the field of compiler design. 
+
+Join JODC + OSDC for a talk centred around few important questions such as: 
+- Why are compilers important?
+- Where are they used?
+- How does a compiler break down code into machine instructions?
+
+This talk is for anyone who wants to know about compilers and about LLVM Open Source Compiler Infrastucture which powers various programming languages like C/C++, Fortran, Julia, Rust, Swift and more! 😎
+
+Date: Wednesday, 24th August 2022
+Time: 10:00 P.M.
+Meet Link: https://meet.jit.si/OSDCMeetup (Online)
+Fill out the form: https://forms.gle/ByX3XdvDx8XAuZup6
+
+(Links in bio)
