@@ -41,6 +41,22 @@
         max-width: 100%;
         height: auto;
     }
+
+    @media (min-width: 768px) {
+        .modal-body {
+            display: flex;
+            align-items: center;
+        }
+
+        .modal-body .modal-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .modal-body .modal-text {
+            flex: 1;
+        }
+    }
 </style>
 {% endblock %}
 {% block page_title %}Image Gallery{% endblock %}
@@ -67,8 +83,12 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="{% static item.image %}" class="img-fluid" alt="deeznuts">
-                        <p class="mt-3">{{ item.caption }}</p>
+                        <div class="modal-image">
+                            <img src="{% static item.image %}" class="img-fluid" alt="deeznuts">
+                        </div>
+                        <div class="modal-text">
+                            <p class="mt-3">{{ item.caption }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,9 +100,4 @@
         {% endfor %}
     </div>
 </div>
-{% endblock %}
-
-{% block extra_js %}
-<script>
-</script>
 {% endblock %}
