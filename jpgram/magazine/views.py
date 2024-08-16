@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
+from datetime import datetime
 import os
 
 
@@ -52,13 +53,51 @@ def osdcjiit(request):
     )
 
     # Collect all the image filenames
-    image_list = []
+    image_data_list = []
     if os.path.exists(static_dir):
         for filename in os.listdir(static_dir):
             if filename.endswith((".jpg", ".jpeg", ".png")):
-                image_list.append(f"magazine/osdcjiit/{filename}")
+                image_path = f"magazine/osdcjiit/{filename}"
+                datetime_str = filename.split("_UTC")[0]
 
-    return render(request, "magazine/osdcjiit.html", {"images": image_list})
+                try:
+                    # Convert the extracted part to a datetime object
+                    image_datetime = datetime.strptime(
+                        datetime_str, "%Y-%m-%d_%H-%M-%S"
+                    )
+                    formatted_datetime = image_datetime.strftime(
+                        "%B %d"
+                    )
+                except ValueError:
+                    formatted_datetime = "Unknown Date/Time"
+
+                # Try to find the corresponding caption (same name but with .txt extension)
+                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                caption_path = os.path.join(static_dir, caption_filename)
+
+                # Default caption if no caption file exists
+                caption = "No caption available"
+
+                # Read caption from the file if it exists
+                if os.path.exists(caption_path):
+                    with open(caption_path, "r") as caption_file:
+                        caption = (
+                            caption_file.read().strip()
+                        )  # Strip to remove any extra newlines
+
+                # Append the image and its caption to the list
+                image_data_list.append(
+                    {
+                        "image": image_path,
+                        "caption": caption,
+                        "datetime": formatted_datetime,
+                    }
+                )
+                print(image_data_list)
+
+    return render(
+        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+    )
 
 
 def parola_literaryhub(request):
