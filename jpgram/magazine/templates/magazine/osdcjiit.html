@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Image Gallery{% endblock %}
+
+{% block extra_css %}
+<style>
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+        .card-img-top {
+            height: 300px;
+        }
+    }
+
+    .card {
+        height: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+</style>
+{% endblock %}
+
+{% block page_title %}Image Gallery{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for image in images %}
+        <div class="col">
+            <div class="card shadow">
+                <img src="{% static image %}" class="card-img-top" alt="deeznuts">
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <p class="card-text">Caption</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p class="text-center">No images available.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
