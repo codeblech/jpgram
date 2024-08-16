@@ -48,7 +48,7 @@ def cice_jiit(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/cice_jiit.html", {"image_data_list": image_data_list}
     )
 
 
@@ -91,7 +91,7 @@ def crescendojiit(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/crescendojiit.html", {"image_data_list": image_data_list}
     )
 
 
@@ -134,7 +134,7 @@ def gdscjiit(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/gdscjiit.html", {"image_data_list": image_data_list}
     )
 
 
@@ -181,7 +181,9 @@ def jaypee_photo_enthusiasts_guild(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request,
+        "magazine/jaypee.photo.enthusiasts.guild.html",
+        {"image_data_list": image_data_list},
     )
 
 
@@ -224,7 +226,7 @@ def jhankaarjiit(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/jhankaarjiit.html", {"image_data_list": image_data_list}
     )
 
 
@@ -267,7 +269,7 @@ def jiit_impressions(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/jiit.impressions.html", {"image_data_list": image_data_list}
     )
 
 
@@ -310,7 +312,7 @@ def jiityouthclub(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/jiityouthclub.html", {"image_data_list": image_data_list}
     )
 
 
@@ -353,7 +355,7 @@ def knuth_jiit(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/knuth_jiit.html", {"image_data_list": image_data_list}
     )
 
 
@@ -396,7 +398,7 @@ def nssjiit62(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/nssjiit62.html", {"image_data_list": image_data_list}
     )
 
 
@@ -500,7 +502,9 @@ def parola_literaryhub(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request,
+        "magazine/parola.literaryhub.html",
+        {"image_data_list": image_data_list},
     )
 
 
@@ -553,7 +557,7 @@ def radiance_hub(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/radiance.hub.html", {"image_data_list": image_data_list}
     )
 
 
@@ -606,7 +610,7 @@ def thejaypeedebsoc(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/thejaypeedebsoc.html", {"image_data_list": image_data_list}
     )
 
 
@@ -659,7 +663,9 @@ def thepageturnersociety(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request,
+        "magazine/thepageturnersociety.html",
+        {"image_data_list": image_data_list},
     )
 
 
@@ -712,7 +718,7 @@ def thethespiancircle(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/thethespiancircle.html", {"image_data_list": image_data_list}
     )
 
 
@@ -765,5 +771,5 @@ def ucrjiit(request):
                 print(image_data_list)
 
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, "magazine/ucrjiit.html", {"image_data_list": image_data_list}
     )
