@@ -32,13 +32,13 @@
 {% block content %}
 <div class="container">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        {% for image in images %}
+        {% for item in image_data_list %}
         <div class="col">
             <div class="card shadow">
-                <img src="{% static image %}" class="card-img-top" alt="deeznuts">
+                <img src="{% static item.image %}" class="card-img-top" alt="deeznuts">
                 <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">Caption</p>
+                    <p class="card-date">{{ item.datetime }}<p/>
+                    <p class="card-text">{{ item.caption }}</p>
                 </div>
             </div>
         </div>
