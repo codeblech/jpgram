@@ -13,11 +13,12 @@ def cice_jiit(request):
     static_dir = os.path.join(
         settings.BASE_DIR, "magazine", "static", "magazine", "cice_jiit"
     )
-
+    print("ffx")
     image_data_list = []
     if os.path.exists(static_dir):
+        print("xxx")
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/cice_jiit/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -45,6 +46,7 @@ def cice_jiit(request):
                         "datetime": formatted_datetime,
                     }
                 )
+                print("ffff")
                 print(image_data_list)
 
     return render(
@@ -60,7 +62,7 @@ def crescendojiit(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/crescendojiit/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -103,7 +105,7 @@ def gdscjiit(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/gdscjiit/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -150,7 +152,7 @@ def jaypee_photo_enthusiasts_guild(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/jaypee.photo.enthusiasts.guild/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -195,7 +197,7 @@ def jhankaarjiit(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/jhankaarjiit/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -238,7 +240,7 @@ def jiit_impressions(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/jiit.impressions/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -281,7 +283,7 @@ def jiityouthclub(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/jiityouthclub/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -324,7 +326,7 @@ def knuth_jiit(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/knuth_jiit/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -367,7 +369,7 @@ def nssjiit62(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/nssjiit62/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -411,7 +413,7 @@ def osdcjiit(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/osdcjiit/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -462,7 +464,7 @@ def parola_literaryhub(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/parola.literaryhub/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -517,7 +519,7 @@ def radiance_hub(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/radiance.hub/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -570,7 +572,7 @@ def thejaypeedebsoc(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/thejaypeedebsoc/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -623,7 +625,7 @@ def thepageturnersociety(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/thepageturnersociety/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -678,7 +680,7 @@ def thethespiancircle(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/thethespiancircle/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
@@ -731,7 +733,7 @@ def ucrjiit(request):
     image_data_list = []
     if os.path.exists(static_dir):
         for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".jpg", ".jpeg", ".png")):
+            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/ucrjiit/{filename}"
                 datetime_str = filename.split("_UTC")[0]
 
