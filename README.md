@@ -28,5 +28,12 @@ Hosted at: https://codeblech.pythonanywhere.com/magazine/
 Go give it a peek. Or don’t. But like… do.
 
 ---
+## Development
+- **Clone the repo**: `gh repo clone codeblech/jpgram`
+- **Install poetry**: `curl -sSL https://install.python-poetry.org | python3 -`
+- **Install dependencies**: From the directory `jpgram/jpgram`, run `poetry install`
+- Activate the newly created virtual environment if poetry didn't do it automatically: `poetry shell`
+- Now, you can make changes and view them using the development server provided by django: `python manage.py runserver`
 
+---
 **“We’re all gonna make it… except the frontend.”**
