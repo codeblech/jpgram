@@ -18,7 +18,7 @@ Listen, the self-updating part? That’s sick. But clubs and societies should ha
 
 ## Contributions? Yeah, we need those.
 
-- **Frontend**: Somebody, please, just do it. I’m begging.
+- **Frontend**: Somebody, please, just do it.
 - **Consistency**: It’d be real nice if all the clubs contributed posts regularly.
 
 ## Check it out:
