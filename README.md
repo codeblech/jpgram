@@ -24,6 +24,7 @@ Listen, the self-updating part? That’s sick. But clubs and societies should ha
 ## Check it out:
 
 Hosted at: https://codeblech.pythonanywhere.com/magazine/
+
 Go give it a peek. Or don’t. But like… do.
 
 ---
