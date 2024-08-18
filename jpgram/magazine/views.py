@@ -13,10 +13,8 @@ def cice_jiit(request):
     static_dir = os.path.join(
         settings.BASE_DIR, "magazine", "static", "magazine", "cice_jiit"
     )
-    print("ffx")
     image_data_list = []
     if os.path.exists(static_dir):
-        print("xxx")
         for filename in sorted(os.listdir(static_dir), reverse=True):
             if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
                 image_path = f"magazine/cice_jiit/{filename}"
@@ -30,7 +28,15 @@ def cice_jiit(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -46,7 +52,6 @@ def cice_jiit(request):
                         "datetime": formatted_datetime,
                     }
                 )
-                print("ffff")
                 print(image_data_list)
 
     return render(
@@ -74,7 +79,15 @@ def crescendojiit(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -117,7 +130,15 @@ def gdscjiit(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -164,7 +185,15 @@ def jaypee_photo_enthusiasts_guild(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -209,7 +238,15 @@ def jhankaarjiit(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -252,7 +289,15 @@ def jiit_impressions(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -295,7 +340,15 @@ def jiityouthclub(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -338,7 +391,15 @@ def knuth_jiit(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -381,7 +442,15 @@ def nssjiit62(request):
                 except ValueError:
                     formatted_datetime = "Unknown Date/Time"
 
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 caption = "No caption available"
@@ -427,7 +496,15 @@ def osdcjiit(request):
                     formatted_datetime = "Unknown Date/Time"
 
                 # Try to find the corresponding caption (same name but with .txt extension)
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 # Default caption if no caption file exists
@@ -480,7 +557,15 @@ def parola_literaryhub(request):
                     formatted_datetime = "Unknown Date/Time"
 
                 # Try to find the corresponding caption (same name but with .txt extension)
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 # Default caption if no caption file exists
@@ -535,7 +620,15 @@ def radiance_hub(request):
                     formatted_datetime = "Unknown Date/Time"
 
                 # Try to find the corresponding caption (same name but with .txt extension)
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 # Default caption if no caption file exists
@@ -588,7 +681,15 @@ def thejaypeedebsoc(request):
                     formatted_datetime = "Unknown Date/Time"
 
                 # Try to find the corresponding caption (same name but with .txt extension)
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 # Default caption if no caption file exists
@@ -641,7 +742,15 @@ def thepageturnersociety(request):
                     formatted_datetime = "Unknown Date/Time"
 
                 # Try to find the corresponding caption (same name but with .txt extension)
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 # Default caption if no caption file exists
@@ -696,7 +805,15 @@ def thethespiancircle(request):
                     formatted_datetime = "Unknown Date/Time"
 
                 # Try to find the corresponding caption (same name but with .txt extension)
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 # Default caption if no caption file exists
@@ -749,7 +866,15 @@ def ucrjiit(request):
                     formatted_datetime = "Unknown Date/Time"
 
                 # Try to find the corresponding caption (same name but with .txt extension)
-                caption_filename = os.path.splitext(filename)[0] + ".txt"
+                filename_without_ext = os.path.splitext(filename)[0]
+
+                # Check for an extra numeric part after the UTC and remove it if present
+                if filename_without_ext.endswith("_UTC"):
+                    caption_filename = filename_without_ext + ".txt"
+                else:
+                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
+
+                # Join with the static directory to get the full path
                 caption_path = os.path.join(static_dir, caption_filename)
 
                 # Default caption if no caption file exists
