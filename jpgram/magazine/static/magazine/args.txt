@@ -1,6 +1,6 @@
 --latest-stamps
 --no-videos
---no-compress-json
+--no-metadata-json
 cice_jiit
 crescendojiit
 gdscjiit
