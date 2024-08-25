@@ -66,7 +66,7 @@
         {% for item in image_data_list %}
         <div class="col">
             <div class="card shadow" data-bs-toggle="modal" data-bs-target="#modal-{{ forloop.counter }}">
-                <img src="{% static item.image %}" class="card-img-top" alt="deeznuts">
+                <img src="{{ item.image | safe }}" class="card-img-top" alt="deeznuts">
                 <div class="card-body">
                     <p class="card-date">{{ item.datetime }}</p>
                     <p class="card-text">{{ item.caption }}</p>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="modal-image">
-                            <img src="{% static item.image %}" class="img-fluid" alt="deeznuts">
+                            <img src="{{ item.image | safe }}" class="img-fluid" alt="deeznuts">
                         </div>
                         <div class="modal-text">
                             <p class="mt-3">{{ item.caption }}</p>
