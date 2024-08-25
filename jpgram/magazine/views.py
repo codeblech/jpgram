@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from datetime import datetime
 import os
+from .models import image_index
 
 
 def index(request):
@@ -10,893 +11,160 @@ def index(request):
 
 
 def cice_jiit(request):
+    club = "cice_jiit"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "cice_jiit"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/cice_jiit/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/cice_jiit.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def crescendojiit(request):
+    club = "crescendojiit"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "crescendojiit"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/crescendojiit/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/crescendojiit.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def gdscjiit(request):
+    club = "gdscjiit"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "gdscjiit"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/gdscjiit/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/gdscjiit.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def jaypee_photo_enthusiasts_guild(request):
+    club = "jaypee.photo.enthusiasts.guild"
     static_dir = os.path.join(
-        settings.BASE_DIR,
-        "magazine",
-        "static",
-        "magazine",
-        "jaypee.photo.enthusiasts.guild",
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/jaypee.photo.enthusiasts.guild/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request,
-        "magazine/jaypee.photo.enthusiasts.guild.html",
-        {"image_data_list": image_data_list},
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def jhankaarjiit(request):
+    club = "jhankaarjiit"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "jhankaarjiit"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/jhankaarjiit/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/jhankaarjiit.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def jiit_impressions(request):
+    club = "jiit.impressions"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "jiit.impressions"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/jiit.impressions/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/jiit.impressions.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def jiityouthclub(request):
+    club = "jiityouthclub"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "jiityouthclub"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/jiityouthclub/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/jiityouthclub.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def knuth_jiit(request):
+    club = "knuth_jiit"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "knuth_jiit"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/knuth_jiit/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/knuth_jiit.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def nssjiit62(request):
+    club = "nssjiit62"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "nssjiit62"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/nssjiit62/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                caption = "No caption available"
-
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = caption_file.read().strip()
-
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/nssjiit62.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def osdcjiit(request):
+    club = "osdcjiit"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "osdcjiit"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    # Collect all the image filenames
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/osdcjiit/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    # Convert the extracted part to a datetime object
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime("%B %d, %Y")
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                # Try to find the corresponding caption (same name but with .txt extension)
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                # Default caption if no caption file exists
-                caption = "No caption available"
-
-                # Read caption from the file if it exists
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = (
-                            caption_file.read().strip()
-                        )  # Strip to remove any extra newlines
-
-                # Append the image and its caption to the list
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/osdcjiit.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def parola_literaryhub(request):
+    club = "parola.literaryhub"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "parola.literaryhub"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    # Collect all the image filenames
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/parola.literaryhub/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    # Convert the extracted part to a datetime object
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime(
-                        "%B %d, %Y"
-                    )
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                # Try to find the corresponding caption (same name but with .txt extension)
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                # Default caption if no caption file exists
-                caption = "No caption available"
-
-                # Read caption from the file if it exists
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = (
-                            caption_file.read().strip()
-                        )  # Strip to remove any extra newlines
-
-                # Append the image and its caption to the list
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request,
-        "magazine/parola.literaryhub.html",
-        {"image_data_list": image_data_list},
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def radiance_hub(request):
+    club = "radiance.hub"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "radiance.hub"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    # Collect all the image filenames
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/radiance.hub/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    # Convert the extracted part to a datetime object
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime(
-                        "%B %d, %Y"
-                    )
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                # Try to find the corresponding caption (same name but with .txt extension)
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                # Default caption if no caption file exists
-                caption = "No caption available"
-
-                # Read caption from the file if it exists
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = (
-                            caption_file.read().strip()
-                        )  # Strip to remove any extra newlines
-
-                # Append the image and its caption to the list
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/radiance.hub.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def thejaypeedebsoc(request):
+    club = "thejaypeedebsoc"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "thejaypeedebsoc"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    # Collect all the image filenames
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/thejaypeedebsoc/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    # Convert the extracted part to a datetime object
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime(
-                        "%B %d, %Y"
-                    )
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                # Try to find the corresponding caption (same name but with .txt extension)
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                # Default caption if no caption file exists
-                caption = "No caption available"
-
-                # Read caption from the file if it exists
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = (
-                            caption_file.read().strip()
-                        )  # Strip to remove any extra newlines
-
-                # Append the image and its caption to the list
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/thejaypeedebsoc.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def thepageturnersociety(request):
+    club = "thepageturnersociety"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "thepageturnersociety"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    # Collect all the image filenames
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/thepageturnersociety/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    # Convert the extracted part to a datetime object
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime(
-                        "%B %d, %Y"
-                    )
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                # Try to find the corresponding caption (same name but with .txt extension)
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                # Default caption if no caption file exists
-                caption = "No caption available"
-
-                # Read caption from the file if it exists
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = (
-                            caption_file.read().strip()
-                        )  # Strip to remove any extra newlines
-
-                # Append the image and its caption to the list
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request,
-        "magazine/thepageturnersociety.html",
-        {"image_data_list": image_data_list},
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def thethespiancircle(request):
+    club = "thethespiancircle"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "thethespiancircle"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    # Collect all the image filenames
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/thethespiancircle/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    # Convert the extracted part to a datetime object
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime(
-                        "%B %d, %Y"
-                    )
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                # Try to find the corresponding caption (same name but with .txt extension)
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                # Default caption if no caption file exists
-                caption = "No caption available"
-
-                # Read caption from the file if it exists
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = (
-                            caption_file.read().strip()
-                        )  # Strip to remove any extra newlines
-
-                # Append the image and its caption to the list
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/thethespiancircle.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
 
 
 def ucrjiit(request):
+    club = "ucrjiit"
     static_dir = os.path.join(
-        settings.BASE_DIR, "magazine", "static", "magazine", "ucrjiit"
+        settings.BASE_DIR, "magazine", "static", "magazine", club
     )
-
-    # Collect all the image filenames
-    image_data_list = []
-    if os.path.exists(static_dir):
-        for filename in sorted(os.listdir(static_dir), reverse=True):
-            if filename.endswith((".webp", ".jpg", ".jpeg", ".png")):
-                image_path = f"magazine/ucrjiit/{filename}"
-                datetime_str = filename.split("_UTC")[0]
-
-                try:
-                    # Convert the extracted part to a datetime object
-                    image_datetime = datetime.strptime(
-                        datetime_str, "%Y-%m-%d_%H-%M-%S"
-                    )
-                    formatted_datetime = image_datetime.strftime(
-                        "%B %d, %Y"
-                    )
-                except ValueError:
-                    formatted_datetime = "Unknown Date/Time"
-
-                # Try to find the corresponding caption (same name but with .txt extension)
-                filename_without_ext = os.path.splitext(filename)[0]
-
-                # Check for an extra numeric part after the UTC and remove it if present
-                if filename_without_ext.endswith("_UTC"):
-                    caption_filename = filename_without_ext + ".txt"
-                else:
-                    caption_filename = '_'.join(filename_without_ext.split('_')[:-1]) + ".txt"
-
-                # Join with the static directory to get the full path
-                caption_path = os.path.join(static_dir, caption_filename)
-
-                # Default caption if no caption file exists
-                caption = "No caption available"
-
-                # Read caption from the file if it exists
-                if os.path.exists(caption_path):
-                    with open(caption_path, "r") as caption_file:
-                        caption = (
-                            caption_file.read().strip()
-                        )  # Strip to remove any extra newlines
-
-                # Append the image and its caption to the list
-                image_data_list.append(
-                    {
-                        "image": image_path,
-                        "caption": caption,
-                        "datetime": formatted_datetime,
-                    }
-                )
-                print(image_data_list)
-
     return render(
-        request, "magazine/ucrjiit.html", {"image_data_list": image_data_list}
+        request, f"magazine/{club}.html", {"image_data_list": image_index[club]}
     )
